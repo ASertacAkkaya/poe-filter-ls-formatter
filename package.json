@@ -1,0 +1,33 @@
+{
+  "name": "poe-filter-ls",
+  "displayName": "Path of Exile Item Filter Language Support",
+  "description": "Adds language support for .filter files for Path of Exile item filters.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.91.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./formatter.js",
+  "publisher": "anseradev",
+  "contributes": {
+    "languages": [{
+      "id": "poe-filter",
+      "aliases": ["PoE Item Filter", "Path of Exile Item Filter"],
+      "extensions": [".filter"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "poe-filter",
+      "scopeName": "text.filter",
+      "path": "./syntaxes/filter.tmLanguage.json"
+    }],
+    "formatters": [
+        {
+            "languageId": "poe-filter",
+            "formatter": "PoE Formatter"
+        }
+    ]
+  }
+}

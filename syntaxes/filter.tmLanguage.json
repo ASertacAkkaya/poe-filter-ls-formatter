@@ -1,0 +1,56 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "PoE Filter",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#constants"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.filter",
+				"match": "\\b(AlternateQuality|AnyEnchantment|ArchnemesisMod|AreaLevel|BaseArmour|BaseDefencePercentile|BaseEnergyShield|BaseEvasion|BaseType|BaseWard|BlightedMap|Class|Corrupted|CorruptedMods|DropLevel|ElderItem|ElderMap|EnchantmentPassiveNode|EnchantmentPassiveNum|FracturedItem|GemLevel|HasCruciblePassiveTree|HasEaterOfWorldsImplicit|HasEnchantment|HasExplicitMod|HasImplicitMod|HasInfluence|HasSearingExarchImplicit|Height|Identified|ItemLevel|LinkedSockets|MapTier|Mirrored|Quality|Rarity|Replica|Scourged|ShapedMap|ShaperItem|SocketGroup|Sockets|StackSize|SynthesisedItem|TransfiguredGem|UberBlightedMap|Width|PlayAlertSound|PlayAlertSoundPositional|CustomAlertSound|CustomAlertSoundOptional|DisableDropSound|EnableDropSound|DisableDropSoundIfAlertSound|EnableDropSoundIfAlertSound|MinimapIcon|PlayEffect|SetBackgroundColor|SetBorderColor|SetFontSize|SetTextColor)\\b"
+			},
+			{
+				"name": "keyword.other.filter",
+				"match": "\\b(Show|Hide|Minimal|Import)\\b"
+			},
+			{
+				"name": "keyword.operator.filter",
+				"match": "\\b(>|<|>=|<=|=|!|==|!=)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.filter",
+			"begin": "\"",
+			"end": "\""
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.number-sign.filter",
+				"match": "#.*"
+			}]
+		},
+		"constants": {
+			"patterns": [{
+				"name": "constant.language.filter",
+				"match": "\\b(Red|Green|Blue|Brown|White|Yellow|Cyan|Grey|Orange|Pink|Purple|Circle|Diamond|Hexagon|Square|Star|Triangle|Cross|Moon|Raindrop|Kite|Pentagon|UpsideDownHouse|R|G|B|Shaper|Elder|Crusader|Hunter|Redeemer|Warlord|None|ShAlchemy|ShBlessed|ShChaos|ShDivine|ShExalted|ShFusing|ShGeneral|ShMirror|ShRegal|ShVaal|True|False|Continue|Optional)\\b"
+			},
+			{
+				"name": "constant.numeric.filter",
+				"match": "\\b([0-9]+)\\b"
+			}]
+		}
+	},
+	"scopeName": "text.filter"
+}

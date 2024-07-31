@@ -1,8 +1,8 @@
 {
-  "name": "poe-filter-ls",
-  "displayName": "Path of Exile Item Filter Language Support",
-  "description": "Adds language support for .filter files for Path of Exile item filters.",
-  "version": "0.0.1",
+  "name": "poe-filter-ls-formatter",
+  "displayName": "Path of Exile Item Filter Language Support & Formatter",
+  "description": "Adds language support for .filter files for Path of Exile item filters, also adds basic indentation formatting.",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.91.0"
   },
@@ -10,11 +10,11 @@
     "Programming Languages"
   ],
   "main": "./formatter.js",
-  "publisher": "anseradev",
+  "publisher": "AnseraDev",
   "contributes": {
     "languages": [{
       "id": "poe-filter",
-      "aliases": ["PoE Item Filter", "Path of Exile Item Filter"],
+      "aliases": ["PoE Item Filter", "Path of Exile Item Filter", "Path of Exile Filter Formatter"],
       "extensions": [".filter"],
       "configuration": "./language-configuration.json"
     }],
@@ -26,7 +26,7 @@
     "formatters": [
         {
             "languageId": "poe-filter",
-            "formatter": "PoE Formatter"
+            "formatter": "PoE Filter Formatter"
         }
     ]
   }

@@ -11,6 +11,9 @@
   ],
   "main": "./formatter.js",
   "publisher": "AnseraDev",
+  "repository": {
+    "url": "https://github.com/ASertacAkkaya/poe-filter-ls-formatter"
+  },
   "contributes": {
     "languages": [{
       "id": "poe-filter",
